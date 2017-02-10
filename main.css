@@ -50,10 +50,6 @@ div {
 	letter-spacing: .01rem;
 }
 
-p br {
-	line-height: 3rem;
-}
-
 #butstay {
 	font-size: 3rem;
 	font-family: 'Monoton', cursive;
@@ -65,7 +61,7 @@ p br {
 
 #signout {
 	font-family: 'Mr De Haviland', cursive;
-	font-size: 5.5rem;
+	font-size: 6rem;
 	letter-spacing: .2rem;
 }
 
