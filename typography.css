@@ -1,0 +1,113 @@
+/* ===== Resets =====*/
+body, a, ul, li, h1, h3, p { margin: .2em; }
+a { text-decoration: none; color: white; }
+li { list-style-type: none; }
+
+
+/* ===== Elements ===== */
+a {
+  font-size: 2.5em;
+}
+a:visited {
+  color: lightsalmon;
+}
+a:hover {
+  color: lightsalmon;
+}
+body {
+  color: white;
+  font-size: 100%;
+}
+br {
+  margin: 50px 0;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  letter-spacing: .2em;
+  padding: 10px;
+  border: solid 10px yellow;
+  border-radius: 10px;
+}
+h1,h3 {
+}
+h3 {
+  font-size: 3em;
+  letter-spacing: .1em
+}
+img {
+  width: 60%;
+  border: dashed 10px red;
+  margin: 15px 0;
+}
+ul {
+  font-size: 1em;
+}
+li {
+
+}
+p {
+  font-size: 2em;
+  font-family: inherit;
+  border: dotted 5px white;
+  padding: 20px;
+  border-radius: 10px;
+  letter-spacing: .2em; 
+}
+
+
+/* ===== Wrappers ===== */
+.wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightsteelblue;
+  flex-direction: column;
+  text-align: center;
+}
+.font-class, .links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+  border: dashed 10px red;
+  border-radius: 20px;
+  padding: 50px;
+}
+.links-wrapper {
+  background-color: royalblue;
+}
+.links-wrapper>h1 {
+  font-family: 'Lobster';
+}
+.links-wrapper>ul {
+  font-family: 'Lato';
+}
+
+
+/* ===== Fonts ===== */
+.serif { font-family: serif; background-color: indianred; }
+.timesnewroman { font-family: 'Times New Roman'; } .georgia { font-family: 'Georgia'; }
+
+.sansserif { font-family: sans-serif; background-color: royalblue;}
+.helvetica { font-family: 'Helvetica'; } .arial { font-family: 'Arial'; } .verdana { font-family: 'Verdana';} .lucidasansunicode { font-family: 'Lucida Sans Unicode'; }
+
+.monospace { font-family: monospace; background-color: seagreen; }
+.couriernew { font-family: 'Courier New'; } .lucidaconsole { font-family: 'Lucida Console'; }
+
+.geometricsans { background-color: darkslateblue; font-family: 'Poppins'; }
+.josefinsans { font-family: 'Josefin Sans'; } .poppins { font-family: 'Poppins'; }
+
+.humanistsans { background-color: teal; font-family: 'Tahoma'; }
+.tahoma { font-family: 'Tahoma' } .verdana { font-family: 'Verdana' } .droidsans { font-family: 'Droid Sans'; } .lato { font-family: 'Lato'; }
+
+.slabserif { background-color: indianred; font-family: 'Arvo'; }
+.arvo { font-family: 'Arvo'; } .robotoslab { font-family: 'Roboto Slab'; }
+
+.display { background-color: darkorange; font-family: 'Playfair Display'; }
+.playfairdisplay { font-family: 'Playfair Display'; }
+.lobster { font-family: 'Lobster'; } .bangers { font-family: 'Bangers'; }
+
+
