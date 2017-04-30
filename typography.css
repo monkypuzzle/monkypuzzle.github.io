@@ -1,18 +1,15 @@
 /* ===== Resets =====*/
 body, a, ul, li, h1, h3, p { margin: .2em; }
 a { text-decoration: none; color: white; }
-li { list-style-type: none; }
+li { list-style-type: none }
 
 
 /* ===== Elements ===== */
 a {
-  font-size: 2.5em;
-}
-a:visited {
-  color: lightsalmon;
+  font-size: 1em;
 }
 a:hover {
-  color: lightsalmon;
+  color: silver;
 }
 body {
   color: white;
@@ -26,8 +23,7 @@ h1 {
   font-size: 4em;
   letter-spacing: .2em;
   padding: 10px;
-  border: solid 10px yellow;
-  border-radius: 10px;
+  border-bottom: solid 5px yellow;
 }
 h1,h3 {
 }
@@ -37,21 +33,15 @@ h3 {
 }
 img {
   width: 60%;
-  border: dashed 10px red;
   margin: 15px 0;
 }
 ul {
   font-size: 1em;
+  margin-bottom: 1.5em;
 }
 li {
-
-}
-p {
   font-size: 2em;
   font-family: inherit;
-  border: dotted 5px white;
-  padding: 20px;
-  border-radius: 10px;
   letter-spacing: .2em; 
 }
 
@@ -72,27 +62,34 @@ p {
   justify-content: center;
   flex-direction: column;
   margin: 20px 0;
-  border: dashed 10px red;
-  border-radius: 20px;
+  box-shadow: 10px 10px darkgrey;
   padding: 50px;
+  max-width: 1000px;
+
 }
 .links-wrapper {
   background-color: royalblue;
-}
-.links-wrapper>h1 {
-  font-family: 'Lobster';
-}
-.links-wrapper>ul {
   font-family: 'Lato';
 }
-
+.tips-wrapper {
+  font-size: .9em;
+  background-color: grey;
+  font-family: 'Lato';
+}
+.tips-wrapper li {
+  margin: .5em 0;
+}
+.underline {
+  text-decoration: underline;
+  margin: .5em 0;
+}
 
 /* ===== Fonts ===== */
 .serif { font-family: serif; background-color: indianred; }
 .timesnewroman { font-family: 'Times New Roman'; } .georgia { font-family: 'Georgia'; }
 
 .sansserif { font-family: sans-serif; background-color: royalblue;}
-.helvetica { font-family: 'Helvetica'; } .arial { font-family: 'Arial'; } .verdana { font-family: 'Verdana';} .lucidasansunicode { font-family: 'Lucida Sans Unicode'; }
+.helvetica { font-family: 'Helvetica'; } .arial { font-family: 'Arial'; } .helvetica { font-family: 'Helvetica';} .lucidasansunicode { font-family: 'Lucida Sans Unicode'; }
 
 .monospace { font-family: monospace; background-color: seagreen; }
 .couriernew { font-family: 'Courier New'; } .lucidaconsole { font-family: 'Lucida Console'; }
