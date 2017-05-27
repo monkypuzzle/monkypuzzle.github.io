@@ -1,0 +1,111 @@
+---
+# Frontmatter
+
+---
+
+@import reset
+
+$light-grey: whitesmoke;
+$dark-grey: #323232;
+$copy-font: 'Cormorant';
+$header-font: 'Playfair Display';
+
+* {
+  border: solid 1px red;
+}
+
+// I. Styling Classes
+// ========================================
+.flex-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center
+  }
+.font-sm { font-size: 1.2em; }
+.font-md { font-size: 3em; }
+.font-lg { font-size: 4.5em; }
+.font-xlg { font-size: 6em; }
+.font-nav {
+  color: white;
+  font-family: $copy-font;
+  letter-spacing: .15em;
+  }
+
+
+// II. Structural Classes
+// ========================================
+// Universal
+.base-background {
+  background-color: $light-grey;
+  height: 100vh;
+  width: 100vw;
+  }
+
+// Left-hand Navigation
+.navbar-wrapper {
+  @extend .flex-column;
+  background-color: $dark-grey;
+  height: 100vh;
+  justify-content: space-between;
+  position: fixed;
+  width: 200px
+  }
+.mugshot-nav-wrapper {
+  @extend .flex-column;
+  height: 70%;
+  }
+.mugshot {
+  height: 100px;
+  width: 100px;
+  }
+.nav {
+  width: 170px;
+  }
+.nav-links {
+  border-bottom: solid 1px $light-grey;
+  }
+.nav-link {
+  @extend .font-nav;
+  @extend .font-sm;
+  margin: 10px 0;
+  text-align: center;
+  }
+.social-icons-wrapper {
+  @extend .flex-column;
+  height: 30%;
+  justify-content: center;
+  }
+.social-icons
+.social-icons-row
+.social-icon {
+  height: 50px;
+  margin: 10px;
+  width: 50px
+  }
+
+// Main Content
+.content-wrapper {
+  background-color: $light-grey;
+  height: 100vh;
+  left: 200px;
+  position: absolute
+  }
+
+// Landing Panel
+.landing-panel {
+  @extend .flex-column;
+  align-items: flex-start;
+  height: 100%; }
+.landing-headers-1
+.landing-headers-2
+.landing-headers-3
+.landing-header-main {
+  @extend .font-xlg;
+  font-family: $header-font;
+  line-height: 1em; }
+.landing-header-sub {
+  @extend .font-md;
+  font-family: $copy-font;
+  font-style: italic; }
+
