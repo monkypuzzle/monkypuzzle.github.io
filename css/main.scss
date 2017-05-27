@@ -3,109 +3,154 @@
 
 ---
 
-@import reset
+// I. Imports, Variables, Mixins
+// ========================================
 
-$light-grey: whitesmoke;
-$dark-grey: #323232;
-$copy-font: 'Cormorant';
-$header-font: 'Playfair Display';
+@import "reset";
+@import "extra-reset";
+
+// Colors
+$platinum: #E4E4E4;
+$jet: #323232;
+$sangria: #8F0606;
+$raisin-black: #212121;
+
+// Fonts
+$cormorant: 'Cormorant', serif;
+$pfdisplay: 'Playfair Display', serif;
 
 * {
   border: solid 1px red;
 }
 
-// I. Styling Classes
+
+// II. General Tags
+// ========================================
+a {
+  color: $platinum;
+}
+body {
+  color: $raisin-black;
+  background-color: $platinum;
+}
+div {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 8em;
+  font-family: $pfdisplay;
+  font-weight: bolder;
+  color: $sangria;
+}
+h2 {
+  font-size: 6em;
+  font-family: $pfdisplay;
+}
+h3 {
+  font-size: 3em;
+  font-family: $cormorant;
+  font-style: italic;
+}
+h4 {
+  font-size: 2em;
+  font-family: $cormorant;
+  font-style: italic;
+}
+
+
+// III. Styling & Animation Classes
 // ========================================
 .flex-column {
   align-items: center;
   display: flex;
   flex-direction: column;
-  // justify-content: center
-  }
-.font-sm { font-size: 1.2em; }
-.font-md { font-size: 3em; }
-.font-lg { font-size: 4.5em; }
-.font-xlg { font-size: 6em; }
+  justify-content: center
+}
 .font-nav {
   color: white;
-  font-family: $copy-font;
+  font-family: $cormorant;
+  font-style: italic;
+  font-weight: lighter;
   letter-spacing: .15em;
-  }
+}
 
 
-// II. Structural Classes
+// IV. Structural Classes
 // ========================================
-// Universal
-.base-background {
-  background-color: $light-grey;
+// a. Pervasive
+.page-wrapper {
   height: 100vh;
   width: 100vw;
-  }
+}
 
-// Left-hand Navigation
+// b. Left-hand Navigation
 .navbar-wrapper {
   @extend .flex-column;
-  background-color: $dark-grey;
+  background-color: $jet;
   height: 100vh;
   justify-content: space-between;
   position: fixed;
   width: 200px
-  }
+}
 .mugshot-nav-wrapper {
   @extend .flex-column;
   height: 70%;
-  }
+}
 .mugshot {
   height: 100px;
   width: 100px;
-  }
+}
 .nav {
   width: 170px;
-  }
+}
 .nav-links {
-  border-bottom: solid 1px $light-grey;
-  }
-.nav-link {
   @extend .font-nav;
-  @extend .font-sm;
+}
+.nav-link {
   margin: 10px 0;
   text-align: center;
-  }
+}
 .social-icons-wrapper {
   @extend .flex-column;
   height: 30%;
   justify-content: center;
-  }
+}
 .social-icons
 .social-icons-row
 .social-icon {
   height: 50px;
   margin: 10px;
   width: 50px
-  }
+}
 
-// Main Content
+// c. Main Content
+.base-background {
+  border: solid 1px blue;
+  height: 100vh;
+  width: 100vw
+}
 .content-wrapper {
-  background-color: $light-grey;
+  background-color: $platinum;
   height: 100vh;
   left: 200px;
   position: absolute
-  }
+}
+.panels {
+  border: solid 1px red;
+  height: 100vh;
+  padding: 5%
+}
+.headers {
+  // color: blue;
+}
 
-// Landing Panel
-.landing-panel {
+// d. Landing Panel
+.intro-wrapper {
   @extend .flex-column;
   align-items: flex-start;
-  height: 100%; }
-.landing-headers-1
-.landing-headers-2
-.landing-headers-3
-.landing-header-main {
-  @extend .font-xlg;
-  font-family: $header-font;
-  line-height: 1em; }
-.landing-header-sub {
-  @extend .font-md;
-  font-family: $copy-font;
-  font-style: italic; }
+  height: 100%;
+}
 
+// e. Experience - Windhover Ventures
+
+// f. Experience - 
