@@ -7,7 +7,6 @@
 // ========================================
 
 @import "reset";
-@import "extra-reset";
 
 // Colors
 $platinum: #E4E4E4;
@@ -28,6 +27,7 @@ $pfdisplay: 'Playfair Display', serif;
 // ========================================
 a {
   color: $platinum;
+  text-decoration: none;
 }
 body {
   color: $raisin-black;
@@ -55,6 +55,14 @@ h4 {
   font-size: 2em;
   font-family: $cormorant;
   font-style: italic;
+}
+p {
+  font-family: $cormorant;
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+p~p {
+  margin-top: 1em;
 }
 
 
@@ -142,6 +150,9 @@ h4 {
 }
 .headers {
   // color: blue;
+}
+.post, .blog {
+  padding: 50px;
 }
 
 // d. Landing Panel
