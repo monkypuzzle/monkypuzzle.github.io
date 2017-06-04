@@ -3,45 +3,18 @@
 
 <head>
   <title>{% if page.title %} {{ page.title }} | {% endif %} Paul Newsam, Web Developer</title>
-  <link href="https://fonts.googleapis.com/css?family=Cormorant:300,400|Playfair+Display:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant:300i,400,400i,700|Playfair+Display:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 
 <body>
   <div class="page-wrapper">
 
-    <header class="navbar-wrapper">
-      <div class="mugshot-nav-wrapper">
-        <img class="mugshot" src="#" alt="">
-        <nav class="nav">
-          <ul class="nav-links">
-            <a href="#biography"><li class="nav-link">blog</li></a>
-            <a href="#experience"><li class="nav-link">experience</li></a>
-            <a href="#education"><li class="nav-link">education</li></a>
-            <a href="#biography"><li class="nav-link">biography</li></a>
-          </ul>    
-        </nav>
-      </div>
-      <div class="social-icons-wrapper">
-        <div class="social-icons">
-          <div class="social-icons-row">
-            <img src="" alt="" class="social-icon">
-            <img src="" alt="" class="social-icon">
-          </div>
-          <div class="social-icons-row">
-            <img src="" alt="" class="social-icon">
-            <img src="" alt="" class="social-icon">
-          </div>
-        </div>
-      </div>
-    </header>
+  {% include navbar.html %}
 
   {{ content }}
 
   </div>
-
-  <script src="/assets/jquery-3.2.1.min.js"></script>
-  <script src="/assets/scripts.js"></script>
 
 </body>
 

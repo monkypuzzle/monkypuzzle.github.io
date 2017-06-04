@@ -3,67 +3,71 @@
 
 ---
 
-// I. Imports, Variables, Mixins
+// I. Resets, Variables, Mixins
 // ========================================
 
+// Resets
 @import "reset";
+a { text-decoration: none; }
+div { box-sizing: border-box; }
+mark { background-color: transparent; }
 
 // Colors
 $platinum: #E4E4E4;
 $jet: #323232;
 $sangria: #8F0606;
 $raisin-black: #212121;
+$oldgold: #D1B745;
 
 // Fonts
 $cormorant: 'Cormorant', serif;
 $pfdisplay: 'Playfair Display', serif;
 
-* {
-  border: solid 1px red;
+// II. Typography
+// ========================================
+
+// Typeface:
+// ----------------------------------------
+h1, h2, { font-family: $pfdisplay; }
+body { font-family: $cormorant }
+
+// Color:
+// ----------------------------------------
+body { color: $raisin-black; }
+h1, a, mark { color: $sangria; }
+a:hover { color: lighten($sangria, 15%); }
+.nav-link, .nav-text { color: $platinum; }
+.nav-text { color: $oldgold; }
+.nav-link:hover {
+  color: darken($platinum, 50%);
+  transform: translateX(5px);
+  transition: transform .2s;
+  }
+.nav-text:hover {
+  color: lighten($oldgold, 20%);
 }
+
+// Size & Spacing:
+// ----------------------------------------
+h1 { font-size: 8em; }
+h2 { font-size: 6em; } 
+h3 { font-size: 2.5em; }
+h4 { font-size: 2.5em; }
+p, li { font-size: 1.7em; line-height: 1.3em; }
+p~p { margin-top: 1em; }
+.nav-link { font-size: 1em; letter-spacing: .2em; }
+.nav-text { font-size: 2em; letter-spacing: .05em; line-height: 1em;}
+
+// Style:
+// ----------------------------------------
+h1, h2, mark, strong { font-weight: bolder; }
+h4, .nav-link { font-style: italic; }
+.nav-link { font-weight: 300 }
 
 
 // II. General Tags
 // ========================================
-a {
-  color: $platinum;
-  text-decoration: none;
-}
-body {
-  color: $raisin-black;
-  background-color: $platinum;
-}
-div {
-  box-sizing: border-box;
-}
-h1 {
-  font-size: 8em;
-  font-family: $pfdisplay;
-  font-weight: bolder;
-  color: $sangria;
-}
-h2 {
-  font-size: 6em;
-  font-family: $pfdisplay;
-}
-h3 {
-  font-size: 3em;
-  font-family: $cormorant;
-  font-style: italic;
-}
-h4 {
-  font-size: 2em;
-  font-family: $cormorant;
-  font-style: italic;
-}
-p {
-  font-family: $cormorant;
-  font-size: 1.7em;
-  line-height: 1.3em;
-}
-p~p {
-  margin-top: 1em;
-}
+body { background-color: $platinum; }
 
 
 // III. Styling & Animation Classes
@@ -72,96 +76,112 @@ p~p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center
-}
-.font-nav {
-  color: white;
-  font-family: $cormorant;
-  font-style: italic;
-  font-weight: lighter;
-  letter-spacing: .15em;
+  justify-content: center;
 }
 
 
 // IV. Structural Classes
 // ========================================
-// a. Pervasive
+// Architecture
 .page-wrapper {
   height: 100vh;
   width: 100vw;
 }
+.content-wrapper {
+  background-color: $platinum;
+  left: 160px;
+  padding: 0 50px;
+  position: absolute;
+}
+.lander {
+  @extend .flex-column;
+  background: url(/assets/images/bgimg.jpg) no-repeat fixed center;
+  font-size: 90%;
+  height: 100vh;
+  text-align: center;
+  h1 { font-size: 10em; color: $oldgold; line-height: .9em; }
+}
+.bg-filter {
+  height: 100vh;
+  width: 100%;
+  background-color: darken($raisin-black, 8%);
+  filter: opacity(98%);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  }
+.lander-intro {
+  color: darken($platinum, 10%);
+  margin: 1em 0;
+  z-index: 2;
+  width: 80%;
+}
+.project, .education, .biography { margin: 50px 0; }
+.project-img {
+  float: left;
+  height: 300px;
+  width: 60%;
+  margin: 0 20px 20px 0;
+}
+.project-tech {
+  font-size: 1.2em;
+}
+.project-description { clear: both; }
+.project-details {
+  padding: 20px;
+  h3 { font-family: $pfdisplay; }
+}
+.education, .biography {
+  h3 { font-size: 3em; }
+}
+
+
 
 // b. Left-hand Navigation
 .navbar-wrapper {
   @extend .flex-column;
-  background-color: $jet;
+  background-color: $raisin-black;
   height: 100vh;
-  justify-content: space-between;
   position: fixed;
-  width: 200px
+  width: 160px;
+  z-index: -1;
 }
 .mugshot-nav-wrapper {
   @extend .flex-column;
   height: 70%;
+  justify-content: flex-start;
+  padding: 30px 0;
+  width: 80%;
 }
 .mugshot {
   height: 100px;
   width: 100px;
 }
-.nav {
-  width: 170px;
-}
-.nav-links {
-  @extend .font-nav;
-}
-.nav-link {
+.nav { width: 100%; }
+.nav-link, .nav-text {
   margin: 10px 0;
   text-align: center;
 }
+// .nav-text { border-bottom: solid 2px lighten($oldgold, 10%); }
 .social-icons-wrapper {
   @extend .flex-column;
   height: 30%;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 30px 0;
 }
 .social-icons
 .social-icons-row
 .social-icon {
-  height: 50px;
-  margin: 10px;
-  width: 50px
+  margin: 7px;
+  width: 50px;
+  filter: grayscale(100%);
 }
 
-// c. Main Content
-.base-background {
-  border: solid 1px blue;
-  height: 100vh;
-  width: 100vw
-}
-.content-wrapper {
-  background-color: $platinum;
-  height: 100vh;
-  left: 200px;
-  position: absolute
-}
-.panels {
-  border: solid 1px red;
-  height: 100vh;
-  padding: 5%
-}
-.headers {
-  // color: blue;
-}
-.post, .blog {
-  padding: 50px;
+
+hr:first-of-type {
+  border: dashed 2px lighten($raisin-black, 50%);
 }
 
-// d. Landing Panel
-.intro-wrapper {
-  @extend .flex-column;
-  align-items: flex-start;
-  height: 100%;
-}
-
-// e. Experience - Windhover Ventures
-
-// f. Experience - 
+// div {
+//   border: solid 1px red;
+// }

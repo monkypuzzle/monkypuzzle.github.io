@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Blog"
+---
+
+<div class="content-wrapper">
+  <div class="blog">
+    <h1>Blog</h1>
+      {% for post in site.posts %}
+        <hr /><br />
+          <h2 class="blog-title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+          <h3 class="blog-subtitle">{{ post.subtitle }}</h3>
+          <h4 class="blog-date">{{ post.date | date: "%-d %B %Y" }}</h4>
+          <p class="blog-excerpt">{{ post.excerpt }}</p>
+        <br />
+      {% endfor %}
+  </div>
+</div>
