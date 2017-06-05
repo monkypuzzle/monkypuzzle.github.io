@@ -45,6 +45,7 @@ a:hover { color: lighten($sangria, 15%); }
   }
 .nav-text:hover {
   color: lighten($oldgold, 20%);
+  text-decoration: underline;
 }
 
 // Size & Spacing:
@@ -83,6 +84,8 @@ body { background-color: $platinum; }
 // IV. Structural Classes
 // ========================================
 // Architecture
+// ========================================
+
 .page-wrapper {
   height: 100vh;
   width: 100vw;
@@ -93,9 +96,10 @@ body { background-color: $platinum; }
   padding: 0 50px;
   position: absolute;
 }
+// Portfolio Page
+// ========================================
 .lander {
   @extend .flex-column;
-  background: url(/assets/images/bgimg.jpg) no-repeat fixed center;
   font-size: 90%;
   height: 100vh;
   text-align: center;
@@ -105,7 +109,7 @@ body { background-color: $platinum; }
   height: 100vh;
   width: 100%;
   background-color: darken($raisin-black, 8%);
-  filter: opacity(98%);
+  filter: opacity(100%);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -123,28 +127,33 @@ body { background-color: $platinum; }
   width: 60%;
   margin: 0 20px 20px 0;
 }
-.project-tech {
-  font-size: 1.2em;
-}
+.project-tech { font-size: 1.2em; }
 .project-description { clear: both; }
 .project-details {
   padding: 20px;
   h3 { font-family: $pfdisplay; }
 }
-.education, .biography {
+.biography {
   h3 { font-size: 3em; }
+}
+.biography-body { margin: 20px 0; }
+.mugshot {
+  // display: inline-block;
+  float: left;
+  width: 300px;
+  margin: 20px 25px 20px 0;
 }
 
 
 
-// b. Left-hand Navigation
+// Navbar
 .navbar-wrapper {
   @extend .flex-column;
   background-color: $raisin-black;
   height: 100vh;
   position: fixed;
   width: 160px;
-  z-index: -1;
+  z-index: 0;
 }
 .mugshot-nav-wrapper {
   @extend .flex-column;
@@ -152,10 +161,6 @@ body { background-color: $platinum; }
   justify-content: flex-start;
   padding: 30px 0;
   width: 80%;
-}
-.mugshot {
-  height: 100px;
-  width: 100px;
 }
 .nav { width: 100%; }
 .nav-link, .nav-text {
@@ -169,18 +174,18 @@ body { background-color: $platinum; }
   justify-content: flex-end;
   padding: 30px 0;
 }
-.social-icons
-.social-icons-row
-.social-icon {
-  margin: 7px;
-  width: 50px;
-  filter: grayscale(100%);
+
+.thick {
+  border: dotted 3px $raisin-black;
 }
 
-
-hr:first-of-type {
+.dashed {
   border: dashed 2px lighten($raisin-black, 50%);
 }
+
+// Blog
+// ========================================
+.post, .blog { padding: 30px 0; }
 
 // div {
 //   border: solid 1px red;
