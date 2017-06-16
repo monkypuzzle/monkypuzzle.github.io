@@ -2,37 +2,37 @@
 # Frontmatter
 
 ---
+// =========================================================
+// ----------------------- I. RESETS -----------------------
+// =========================================================
 
-// I. Resets, Variables, Mixins
-// ========================================
-
-// Resets
+// Resets_______________________________
 @import "reset";
 a { text-decoration: none; }
 div { box-sizing: border-box; }
 mark { background-color: transparent; }
 
-// Colors
+// Colors_______________________________
 $platinum: #E4E4E4;
 $jet: #323232;
 $sangria: #8F0606;
 $raisin-black: #212121;
 $oldgold: #D1B745;
 
-// Fonts
+// Fonts________________________________
 $cormorant: 'Cormorant', serif;
 $pfdisplay: 'Playfair Display', serif;
 
-// II. Typography
-// ========================================
 
-// Typeface:
-// ----------------------------------------
+// =========================================================
+// -------------------- II. TYPOGRAPHY ---------------------
+// =========================================================
+
+// Typeface______________________________
 h1, h2, { font-family: $pfdisplay; }
 body { font-family: $cormorant }
 
-// Color:
-// ----------------------------------------
+// Color_________________________________
 body { color: $raisin-black; }
 h1, a, mark { color: $sangria; }
 a:hover { color: lighten($sangria, 15%); }
@@ -48,8 +48,7 @@ a:hover { color: lighten($sangria, 15%); }
   text-decoration: underline;
 }
 
-// Size & Spacing:
-// ----------------------------------------
+// Size & Spacing________________________
 h1 { font-size: 8em; }
 h2 { font-size: 6em; } 
 h3 { font-size: 2.5em; }
@@ -59,20 +58,19 @@ p~p { margin-top: 1em; }
 .nav-link { font-size: 1em; letter-spacing: .2em; }
 .nav-text { font-size: 2em; letter-spacing: .05em; line-height: 1em;}
 
-// Style:
-// ----------------------------------------
+// Style_________________________________
 h1, h2, mark, strong { font-weight: bolder; }
 h4, .nav-link { font-style: italic; }
 .nav-link { font-weight: 300 }
 
-
-// II. General Tags
-// ========================================
+// =========================================================
+// ------------------- III. GENERAL TAGS -------------------
+// =========================================================
 body { background-color: $platinum; }
 
-
-// III. Styling & Animation Classes
-// ========================================
+// =========================================================
+// ------------ IV. STYLING & ANIMATION CLASSES ------------
+// =========================================================
 .flex-column {
   align-items: center;
   display: flex;
@@ -80,15 +78,13 @@ body { background-color: $platinum; }
   justify-content: center;
 }
 
+// =========================================================
+// ----------------- V. Structural Classes -----------------
+// =========================================================
 
-// IV. Structural Classes
-// ========================================
-// Architecture
-// ========================================
+// Architecture_________________________
 
-// Universal Components
-// ========================================
-
+// Universal Components_________________
 .navbar-wrapper {
   @extend .flex-column;
   background-color: $raisin-black;
@@ -115,14 +111,11 @@ body { background-color: $platinum; }
   justify-content: flex-end;
   padding: 30px 0;
 }
-
 .thick { border: dotted 3px $raisin-black; }
 .dashed { border: dashed 2px lighten($raisin-black, 50%); }
 
 
-// Wrappers
-// ========================================
-
+// Wrappers____________________________
 .content-wrapper {
   background-color: $platinum;
   margin-left: 160px;
@@ -130,8 +123,7 @@ body { background-color: $platinum; }
 }
 
 
-// Portfolio
-// ========================================
+// Portfolio____________________________
 .lander, .closer {
   @extend .flex-column;
   font-size: 90%;
@@ -190,10 +182,7 @@ body { background-color: $platinum; }
   margin: 20px 25px 20px 0;
 }
 
-
-
-// Blog
-// ========================================
+// Blog_________________________________
 .post, .blog { padding: 30px 0; }
 
 // div { border: solid 1px red; }
