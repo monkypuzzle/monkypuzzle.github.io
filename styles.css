@@ -1,0 +1,40 @@
+/* Resets */
+body, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+a { text-decoration: none; }
+
+/* Styling Classes */
+.flex-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Structural Classes */
+.page-wrapper {
+  background-color: #212121;
+  height: 100vh;
+  width: 100vw;
+}
+.content-wrapper {
+}
+
+/* General Tags */
+a {
+  color: #D1B745;
+}
+a:hover {
+  color: lighten(#D1B745, 20%);
+  text-decoration: underline;
+}
+body {
+  color: #E4E4E4;
+  font-family: 'Playfair Display';
+  font-size: 24px;
+}
+h1, h2, h3 {
+  text-align: center;
+}
