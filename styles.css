@@ -1,5 +1,5 @@
 /* Resets */
-body, h1, h2, h3 {
+body, h1, h3, p, br {
   margin: 0;
   padding: 0;
 }
@@ -12,6 +12,8 @@ a { text-decoration: none; }
   flex-direction: column;
   justify-content: center;
 }
+.margin-top { margin-top: 10px; }
+.margin-bottom { margin-bottom: 10px; }
 
 /* Structural Classes */
 .page-wrapper {
@@ -19,22 +21,54 @@ a { text-decoration: none; }
   height: 100vh;
   width: 100vw;
 }
-.content-wrapper {
-}
 
 /* General Tags */
-a {
+body {
+  color: #E4E4E4;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+  font-family: 'Playfair Display';
+  }
+
+a, h1 {
   color: #D1B745;
 }
+
 a:hover {
   color: lighten(#D1B745, 20%);
   text-decoration: underline;
 }
-body {
-  color: #E4E4E4;
-  font-family: 'Playfair Display';
-  font-size: 24px;
+
+p {
+  color: darkgrey;
+  font-size: 1.1em;
+  font-style: italic;
 }
-h1, h2, h3 {
-  text-align: center;
+
+p em {
+  color: #E4E4E4;
+}
+
+hr {
+  border-color: #E4E4E4;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4em;
+  line-height: .8em;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 800px) {
+  body { font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  body { font-size: 36px;
+  }
 }
