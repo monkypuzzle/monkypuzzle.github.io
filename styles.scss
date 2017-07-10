@@ -1,0 +1,123 @@
+// Resets
+body, h1, h2, h3, p, br {
+  margin: 0;
+  padding: 0;
+}
+a { text-decoration: none; }
+mark { background-color: transparent; }
+
+// Styling Classes
+.flex-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.flex-column {
+  @extend .flex-row;
+  flex-direction: column;
+}
+.mt30 { margin-top: 30px; }
+.mb15 { margin-bottom: 15px; }
+
+// Structural Classes
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+// General Tags
+body {
+  background-color: #212121;
+  color: #E4E4E4;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display';
+  }
+
+a, h1, mark, h2 {
+  color: #D1B745;
+}
+
+a:hover {
+  color: lighten(#D1B745, 20%);
+  text-decoration: underline;
+}
+strong {
+  color: #E4E4E4;
+  font-weight: bold;
+  font-style: normal;
+}
+
+p {
+  color: darkgrey;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+p em {
+  color: #E4E4E4;
+}
+
+hr {
+  border-color: #E4E4E4;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4em;
+  line-height: .8em;
+}
+h2 {
+  font-size: 3em;
+  line-height: .8em;
+}
+
+// Media Queries
+@media only screen and (min-width: 600px) {
+  body { font-size: 24px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  body { font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body { font-size: 36px;
+  }
+}
+
+img.icon {
+  height: 100px;
+  width: 100px;
+}
+.about-me > div {
+  @extend .flex-row;
+  margin: 15px 0;
+}
+.section > * {
+  max-width: 960px;
+}
+.section {
+  @extend .flex-column;
+}
+
+.projects {
+  > div > div {
+    @extend .flex-row;
+  }
+}
+.thumbnail {
+  height: 200px;
+  width: 300px;
+  margin: 15px 30px;
+}
+
+.contact {
+  > div {
+    margin: 15px 0;
+  }
+}

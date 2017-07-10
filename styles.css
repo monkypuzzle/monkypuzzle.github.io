@@ -1,77 +1,98 @@
-/* Resets */
-body, h1, h3, p, br {
+body, h1, h2, h3, p, br {
   margin: 0;
-  padding: 0;
-}
-a { text-decoration: none; }
+  padding: 0; }
 
-/* Styling Classes */
-.flex-column {
+a {
+  text-decoration: none; }
+
+mark {
+  background-color: transparent; }
+
+.flex-row, .flex-column, .section, .about-me > div, .projects > div > div {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.margin-top { margin-top: 30px; }
-.margin-bottom { margin-bottom: 15px; }
+  justify-content: center; }
 
-/* Structural Classes */
-.page-wrapper {
-  background-color: #212121;
+.flex-column, .section {
+  flex-direction: column; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.section {
   height: 100vh;
-  width: 100vw;
-}
+  width: 100vw; }
 
-/* General Tags */
 body {
+  background-color: #212121;
   color: #E4E4E4;
   text-align: center;
   font-size: 18px;
-  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
-}
+  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif; }
 
-h1 {
-  font-family: 'Playfair Display';
-  }
+h1, h2 {
+  font-family: 'Playfair Display'; }
 
-a, h1 {
-  color: #D1B745;
-}
+a, h1, mark, h2 {
+  color: #D1B745; }
 
 a:hover {
-  color: lighten(#D1B745, 20%);
-  text-decoration: underline;
-}
+  color: #e5d797;
+  text-decoration: underline; }
+
+strong {
+  color: #E4E4E4;
+  font-weight: bold;
+  font-style: normal; }
 
 p {
   color: darkgrey;
   font-size: 1.1em;
-  font-style: italic;
-}
+  font-style: italic; }
 
 p em {
-  color: #E4E4E4;
-}
+  color: #E4E4E4; }
 
 hr {
   border-color: #E4E4E4;
-  width: 100%;
-}
+  width: 100%; }
 
 h1 {
   font-size: 4em;
-  line-height: .8em;
-}
+  line-height: .8em; }
 
-/* Media Queries */
+h2 {
+  font-size: 3em;
+  line-height: .8em; }
+
 @media only screen and (min-width: 600px) {
-  body { font-size: 24px;
-  }
+  body {
+    font-size: 24px; } }
 @media only screen and (min-width: 750px) {
-  body { font-size: 32px;
-  }
-}
+  body {
+    font-size: 32px; } }
 @media only screen and (min-width: 1000px) {
-  body { font-size: 36px;
-  }
-}
+  body {
+    font-size: 36px; } }
+img.icon {
+  height: 100px;
+  width: 100px; }
+
+.about-me > div {
+  margin: 15px 0; }
+
+.section > * {
+  max-width: 960px; }
+
+.thumbnail {
+  height: 200px;
+  width: 300px;
+  margin: 15px 30px; }
+
+.contact > div {
+  margin: 15px 0; }
+
+/*# sourceMappingURL=styles.css.map */
