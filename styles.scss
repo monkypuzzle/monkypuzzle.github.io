@@ -144,15 +144,32 @@ img.icon {
 
 
 nav {
+  @extend .flex-column;
+  align-items: flex-start;
   position: fixed;
   top: 30px;
   left: 30px;
+  font-size: .8em;
+
+  > div:first-of-type {
+    margin-bottom: 20px;
+  }
+  > div {
+    @extend .flex-row;
+  }
 }
 
-.menu {
+.link {
   @extend .flex-column;
   @extend .nav-icon;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  span {
+    // display: none;
+    left: 65px;
+    position: absolute;
+    font-size: .7em;
+    font-family: 'Open Sans';
+  }
 }
 
 .blog {

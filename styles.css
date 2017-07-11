@@ -8,12 +8,12 @@ a {
 mark {
   background-color: transparent; }
 
-.flex-row, .flex-column, .section, .menu, .blog, .about-me > div, .projects > div > div {
+.flex-row, .flex-column, .section, nav, .link, .blog, .about-me > div, .projects > div > div, nav > div {
   align-items: center;
   display: flex;
   justify-content: center; }
 
-.flex-column, .section, .menu, .blog {
+.flex-column, .section, nav, .link, .blog {
   flex-direction: column; }
 
 .mt30 {
@@ -103,18 +103,27 @@ img.icon {
 .contact > div {
   margin: 15px 0; }
 
-.nav-icon, .menu, .blog {
+.nav-icon, .link, .blog {
   height: 50px;
   width: 50px;
   border-radius: 50px;
   border: solid 3px #D1B745; }
 
 nav {
+  align-items: flex-start;
   position: fixed;
   top: 30px;
-  left: 30px; }
+  left: 30px;
+  font-size: .8em; }
+  nav > div:first-of-type {
+    margin-bottom: 20px; }
 
-.menu {
-  margin-bottom: 20px; }
+.link {
+  margin-bottom: 10px; }
+  .link span {
+    left: 65px;
+    position: absolute;
+    font-size: .7em;
+    font-family: 'Open Sans'; }
 
 /*# sourceMappingURL=styles.css.map */
