@@ -1,12 +1,24 @@
-// Resets
-body, h1, h2, h3, p, br {
+// I. Resets
+// ========================================
+body, h1, h2, h3, p, br, figure {
   margin: 0;
   padding: 0;
 }
 a { text-decoration: none; }
 mark { background-color: transparent; }
+figure { box-sizing: border-box; }
 
-// Styling Classes
+// II. Variables & Extensions
+// ========================================
+$mercury: #E4E4E4;
+$raisin-black: #212121;
+$old-gold: #D1B745;
+$grey-gradient: linear-gradient(to top right, grey, dimgrey);
+
+$playfair-display: 'Playfair Display', "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+$cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+$open-sans: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+
 .flex-row {
   align-items: center;
   display: flex;
@@ -16,66 +28,80 @@ mark { background-color: transparent; }
   @extend .flex-row;
   flex-direction: column;
 }
+.fit-to-parent {
+  height: 100%;
+  width: 100%;
+}
+.full-window {
+  height: 100vh;
+  width: 100vw;
+}
+.icon-size {
+  height: 50px;
+  width: 50px;
+}
+.stick-to-top {
+  position: fixed;
+  top: 30px;
+}
+
 .mt30 { margin-top: 30px; }
 .mb15 { margin-bottom: 15px; }
 
 // Structural Classes
+// ========================================
+
 .section {
-  height: 100vh;
-  width: 100vw;
+  @extend .full-window;
+}
+.filter {
+  @extend .full-window;
+  position: fixed;
+  background-color: hsla(0, 0%, 13%, .9);
+  z-index: 2;
 }
 
-// General Tags
+// III. Typography
+// ========================================
+
 body {
-  background-color: #212121;
-  color: #E4E4E4;
+  background-color: $raisin-black;
+  color: darkgrey;
   text-align: center;
   font-size: 18px;
-  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif;
+  font-family: $cormorant;
 }
-
-h1, h2 {
-  font-family: 'Playfair Display';
-  }
-
-a, h1, mark, h2 {
-  color: #D1B745;
-}
-
-a:hover {
-  border-color: lighten(#D1B745, 20%);
-  color: lighten(#D1B745, 20%);
-  text-decoration: underline;
-}
-strong {
-  color: #E4E4E4;
-  font-weight: bold;
-  font-style: normal;
-}
-
-p {
-  color: darkgrey;
+p, figcaption {
   font-size: 1.1em;
   font-style: italic;
 }
-
-p em {
-  color: #E4E4E4;
-}
-
-hr {
-  border-color: #E4E4E4;
-  width: 100%;
-}
-
 h1 {
   font-size: 4em;
   line-height: .8em;
+  margin-bottom: .2em;
+  color: $old-gold;
+  font-family: $playfair-display;
 }
 h2 {
   font-size: 3em;
   line-height: .8em;
+  color: $old-gold;
+  font-family: $playfair-display;
 }
+strong {
+  color: $mercury;
+  font-weight: bold;
+  font-style: normal;
+}
+a, mark {
+  color: $old-gold;
+}
+a:hover {
+  border-color: lighten($old-gold, 20%);
+  color: lighten($old-gold, 20%);
+  text-decoration: underline;
+}
+
 
 // Media Queries
 @media only screen and (min-width: 600px) {
@@ -105,8 +131,7 @@ img.icon {
     margin-top: 15px;
   }
   .feather {
-    width: 50px;
-    height: 50px;
+    @extend .icon-size;
     margin: 0 25px;
   }
 }
@@ -122,11 +147,6 @@ img.icon {
     @extend .flex-row;
   }
 }
-.thumbnail {
-  height: 200px;
-  width: 300px;
-  margin: 15px 30px;
-}
 
 .contact {
   > div {
@@ -136,21 +156,19 @@ img.icon {
 
 
 .nav-icon {
-  height: 50px;
-  width: 50px;
+  @extend .icon-size;
   border-radius: 50px;
-  border: solid 3px #D1B745;
+  border: solid 3px $old-gold;
 }
 
 
 nav {
   @extend .flex-column;
+  @extend .stick-to-top;
   align-items: flex-start;
-  position: fixed;
-  top: 30px;
   left: 30px;
   font-size: .8em;
-
+  z-index: 3;
   > div:first-of-type {
     margin-bottom: 20px;
   }
@@ -168,11 +186,32 @@ nav {
     left: 65px;
     position: absolute;
     font-size: .7em;
-    font-family: 'Open Sans';
+    font-family: $open-sans;
   }
 }
 
 .blog {
   @extend .flex-column;
   @extend .nav-icon;
+}
+
+figure {
+  background: $grey-gradient;
+  margin: 15px;
+}
+.thumbnail {
+  height: 200px;
+  width: 300px;
+}
+
+figcaption {
+  height: 0px;
+  width: 300px;
+  font-size: .85em;
+  position: absolute;
+  transform: translateY(-150px);
+}
+
+.filter {
+  display: none;
 }

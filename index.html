@@ -11,7 +11,17 @@
 <body>
   
   <main class="container">
+    <div class="filter"></div>
     <nav>
+      <a class="link" href="#">
+        <span>navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="2"></circle><circle cx="12" cy="4" r="2"></circle><circle cx="12" cy="20" r="2"></circle>
+        </svg>
+      </a>
+      <a class="link" href="#">
+        <span>close</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </a>
       <a class="link" href="#about-me">
         <span>about</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
@@ -39,16 +49,11 @@
       </a>
     </nav>
 
-
-
-
-
-
     <section class="section intro">
-      <p><em>My name is...</em></p>
+      <p>My name is...</p>
       <h1>Paul.</h1>
 
-      <p class="mt30 mb15">And I'm a <em>Web Developer</em>...</p>
+      <p class="mt30 mb15">I'm a <strong>Web Developer</strong> and I'm... </p>
 
       <h2>Looking for opportunities.</h2>
     </section>
@@ -57,13 +62,13 @@
       <p>You may want to know a little bit...</p>
       <h1>About me.</h1>
       <div>
-        <p>Well, I grew up in sunny <strong>San Diego.</strong></p>
+        <p>I grew up in sunny <strong>San Diego.</strong></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
           <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
       </div>
       <div>
-        <p>I did my undergrad at <strong>UC Berkeley.</strong></p>
+        <p>I went to school at <strong>UC Berkeley.</strong></p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award">
           <circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
         </svg>
@@ -78,8 +83,7 @@
       <div>
         <p>And in my spare time, I like to <strong>read and write</strong>.</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
-          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
       </div>
     </section>
@@ -89,14 +93,47 @@
       <h1>Projects.</h1>
       <div>
         <div>
-          <img src="#" alt="" class="thumbnail">
-          <img src="#" alt="" class="thumbnail">
-          <img src="#" alt="" class="thumbnail">
+          <figure>
+            <a href="#">
+              <img src="#" alt="" class="thumbnail">
+              <figcaption class="">
+                <a href="#">
+                <strong>Windhover Ventures</strong><br>
+                Website
+                </a>
+              </figcaption>
+          </figure>
+          <figure>
+              <div class="thumbnail"></div>
+              <figcaption>
+                <strong>Coming Soon</strong>
+              </figcaption>
+          </figure>
+          <figure>
+              <div class="thumbnail"></div>
+              <figcaption>
+                <strong>Coming Soon</strong>
+              </figcaption>
+          </figure>
         </div>
         <div>
-          <img src="#" alt="" class="thumbnail">
-          <img src="#" alt="" class="thumbnail">
-          <img src="#" alt="" class="thumbnail">
+          <figure>
+              <div class="thumbnail"></div>
+              <figcaption>
+                <strong>Coming Soon</strong>
+              </figcaption>
+          </figure>
+          <figure>
+              <div class="thumbnail"></div>
+              <figcaption>
+                <strong>Coming Soon</strong>
+              </figcaption>
+          </figure>          <figure>
+              <div class="thumbnail"></div>
+              <figcaption>
+                <strong>Coming Soon</strong>
+              </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -106,11 +143,7 @@
       <h1>Let's Connect!</h1>
 
       <div>
-        <!--<p>The best way to get in touch with me is to<p>-->
         <h3>Send me an <a href="mailto:paul.newsam@gmail.com">email</a>.</h3>
-      <!--</div>-->
-      <!--<div>-->
-        <!--<p>But you can also<p>-->
         <h3>Find me on <a href="https://github.com/pnewsam">Github</a>.</h3>
         <h3>Connect with me on <a href="https://www.linkedin.com/in/paul-newsam/">LinkedIn</a>.</h3>
         <h3>Download my <a href="resume.pdf">resume</a>.</h3>

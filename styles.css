@@ -1,4 +1,4 @@
-body, h1, h2, h3, p, br {
+body, h1, h2, h3, p, br, figure {
   margin: 0;
   padding: 0; }
 
@@ -8,6 +8,9 @@ a {
 mark {
   background-color: transparent; }
 
+figure {
+  box-sizing: border-box; }
+
 .flex-row, .flex-column, .section, nav, .link, .blog, .about-me > div, .projects > div > div, nav > div {
   align-items: center;
   display: flex;
@@ -16,58 +19,69 @@ mark {
 .flex-column, .section, nav, .link, .blog {
   flex-direction: column; }
 
+.fit-to-parent {
+  height: 100%;
+  width: 100%; }
+
+.full-window, .section, .filter {
+  height: 100vh;
+  width: 100vw; }
+
+.icon-size, .about-me .feather, .nav-icon, .link, .blog {
+  height: 50px;
+  width: 50px; }
+
+.stick-to-top, nav {
+  position: fixed;
+  top: 30px; }
+
 .mt30 {
   margin-top: 30px; }
 
 .mb15 {
   margin-bottom: 15px; }
 
-.section {
-  height: 100vh;
-  width: 100vw; }
+.filter {
+  position: fixed;
+  background-color: rgba(33, 33, 33, 0.9);
+  z-index: 2; }
 
 body {
   background-color: #212121;
-  color: #E4E4E4;
+  color: darkgrey;
   text-align: center;
   font-size: 18px;
-  font-family: 'Cormorant', Georgia, 'Times New Roman', Times, serif; }
+  font-family: "Cormorant", "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif; }
 
-h1, h2 {
-  font-family: 'Playfair Display'; }
+p, figcaption {
+  font-size: 1.1em;
+  font-style: italic; }
 
-a, h1, mark, h2 {
-  color: #D1B745; }
+h1 {
+  font-size: 4em;
+  line-height: .8em;
+  margin-bottom: .2em;
+  color: #D1B745;
+  font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
 
-a:hover {
-  border-color: #e5d797;
-  color: #e5d797;
-  text-decoration: underline; }
+h2 {
+  font-size: 3em;
+  line-height: .8em;
+  color: #D1B745;
+  font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
 
 strong {
   color: #E4E4E4;
   font-weight: bold;
   font-style: normal; }
 
-p {
-  color: darkgrey;
-  font-size: 1.1em;
-  font-style: italic; }
+a, mark {
+  color: #D1B745; }
 
-p em {
-  color: #E4E4E4; }
-
-hr {
-  border-color: #E4E4E4;
-  width: 100%; }
-
-h1 {
-  font-size: 4em;
-  line-height: .8em; }
-
-h2 {
-  font-size: 3em;
-  line-height: .8em; }
+a:hover {
+  border-color: #e5d797;
+  color: #e5d797;
+  text-decoration: underline; }
 
 @media only screen and (min-width: 600px) {
   body {
@@ -88,33 +102,23 @@ img.icon {
   width: 75%;
   margin-top: 15px; }
 .about-me .feather {
-  width: 50px;
-  height: 50px;
   margin: 0 25px; }
 
 .section > * {
   max-width: 960px; }
 
-.thumbnail {
-  height: 200px;
-  width: 300px;
-  margin: 15px 30px; }
-
 .contact > div {
   margin: 15px 0; }
 
 .nav-icon, .link, .blog {
-  height: 50px;
-  width: 50px;
   border-radius: 50px;
   border: solid 3px #D1B745; }
 
 nav {
   align-items: flex-start;
-  position: fixed;
-  top: 30px;
   left: 30px;
-  font-size: .8em; }
+  font-size: .8em;
+  z-index: 3; }
   nav > div:first-of-type {
     margin-bottom: 20px; }
 
@@ -124,6 +128,24 @@ nav {
     left: 65px;
     position: absolute;
     font-size: .7em;
-    font-family: 'Open Sans'; }
+    font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif; }
+
+figure {
+  background: linear-gradient(to top right, grey, dimgrey);
+  margin: 15px; }
+
+.thumbnail {
+  height: 200px;
+  width: 300px; }
+
+figcaption {
+  height: 0px;
+  width: 300px;
+  font-size: .85em;
+  position: absolute;
+  transform: translateY(-150px); }
+
+.filter {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */
