@@ -12,8 +12,9 @@ figure { box-sizing: border-box; }
 // ========================================
 $mercury: #E4E4E4;
 $raisin-black: #212121;
+$black-olive: #3C3D3B;
 $old-gold: #D1B745;
-$grey-gradient: linear-gradient(to top right, grey, dimgrey);
+$jet-gradient: linear-gradient(to top right, #353535, #302F2E);
 
 $playfair-display: 'Playfair Display', "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
 $cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
@@ -71,23 +72,28 @@ body {
   font-size: 18px;
   font-family: $cormorant;
 }
-p, figcaption {
+p {
   font-size: 1.1em;
-  font-style: italic;
+}
+h1, h2, h4 {
+  color: $old-gold;
+  font-family: $playfair-display;
 }
 h1 {
   font-size: 4em;
   line-height: .8em;
   margin-bottom: .2em;
-  color: $old-gold;
-  font-family: $playfair-display;
 }
 h2 {
   font-size: 3em;
   line-height: .8em;
-  color: $old-gold;
-  font-family: $playfair-display;
 }
+h3 {
+  color: $mercury;
+}
+// h4 {
+//   font-size: 2em;
+// }
 strong {
   color: $mercury;
   font-weight: bold;
@@ -195,8 +201,10 @@ nav {
   @extend .nav-icon;
 }
 
-figure {
-  background: $grey-gradient;
+.project {
+  background: $jet-gradient;
+  border: solid 3px darkgrey;
+  // border-radius: 20px;
   margin: 15px;
 }
 .thumbnail {
@@ -213,5 +221,16 @@ figcaption {
 }
 
 .filter {
+  display: none;
+}
+.feather-arrow-down {
+  @extend .icon-size;
+  color: $mercury;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+}
+
+.section-link {
   display: none;
 }

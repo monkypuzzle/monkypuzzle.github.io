@@ -27,7 +27,7 @@ figure {
   height: 100vh;
   width: 100vw; }
 
-.icon-size, .about-me .feather, .nav-icon, .link, .blog {
+.icon-size, .about-me .feather, .nav-icon, .link, .blog, .feather-arrow-down {
   height: 50px;
   width: 50px; }
 
@@ -53,22 +53,24 @@ body {
   font-size: 18px;
   font-family: "Cormorant", "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif; }
 
-p, figcaption {
-  font-size: 1.1em;
-  font-style: italic; }
+p {
+  font-size: 1.1em; }
+
+h1, h2, h4 {
+  color: #D1B745;
+  font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
 
 h1 {
   font-size: 4em;
   line-height: .8em;
-  margin-bottom: .2em;
-  color: #D1B745;
-  font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
+  margin-bottom: .2em; }
 
 h2 {
   font-size: 3em;
-  line-height: .8em;
-  color: #D1B745;
-  font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
+  line-height: .8em; }
+
+h3 {
+  color: #E4E4E4; }
 
 strong {
   color: #E4E4E4;
@@ -130,8 +132,9 @@ nav {
     font-size: .7em;
     font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif; }
 
-figure {
-  background: linear-gradient(to top right, grey, dimgrey);
+.project {
+  background: linear-gradient(to top right, #353535, #302F2E);
+  border: solid 3px darkgrey;
   margin: 15px; }
 
 .thumbnail {
@@ -146,6 +149,15 @@ figcaption {
   transform: translateY(-150px); }
 
 .filter {
+  display: none; }
+
+.feather-arrow-down {
+  color: #E4E4E4;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px; }
+
+.section-link {
   display: none; }
 
 /*# sourceMappingURL=styles.css.map */
