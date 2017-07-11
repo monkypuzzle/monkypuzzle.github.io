@@ -8,12 +8,12 @@ a {
 mark {
   background-color: transparent; }
 
-.flex-row, .flex-column, .section, .about-me > div, .projects > div > div {
+.flex-row, .flex-column, .section, .menu, .blog, .about-me > div, .projects > div > div {
   align-items: center;
   display: flex;
   justify-content: center; }
 
-.flex-column, .section {
+.flex-column, .section, .menu, .blog {
   flex-direction: column; }
 
 .mt30 {
@@ -40,6 +40,7 @@ a, h1, mark, h2 {
   color: #D1B745; }
 
 a:hover {
+  border-color: #e5d797;
   color: #e5d797;
   text-decoration: underline; }
 
@@ -81,8 +82,15 @@ img.icon {
   height: 100px;
   width: 100px; }
 
+.about-me > div:first-of-type {
+  margin-top: 30px; }
 .about-me > div {
-  margin: 15px 0; }
+  width: 75%;
+  margin-top: 15px; }
+.about-me .feather {
+  width: 50px;
+  height: 50px;
+  margin: 0 25px; }
 
 .section > * {
   max-width: 960px; }
@@ -94,5 +102,19 @@ img.icon {
 
 .contact > div {
   margin: 15px 0; }
+
+.nav-icon, .menu, .blog {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: solid 3px #D1B745; }
+
+nav {
+  position: fixed;
+  top: 30px;
+  left: 30px; }
+
+.menu {
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=styles.css.map */

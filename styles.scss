@@ -43,6 +43,7 @@ a, h1, mark, h2 {
 }
 
 a:hover {
+  border-color: lighten(#D1B745, 20%);
   color: lighten(#D1B745, 20%);
   text-decoration: underline;
 }
@@ -94,9 +95,20 @@ img.icon {
   height: 100px;
   width: 100px;
 }
-.about-me > div {
-  @extend .flex-row;
-  margin: 15px 0;
+.about-me {
+  > div:first-of-type {
+    margin-top: 30px;
+  }
+  > div {
+    @extend .flex-row;
+    width: 75%;
+    margin-top: 15px;
+  }
+  .feather {
+    width: 50px;
+    height: 50px;
+    margin: 0 25px;
+  }
 }
 .section > * {
   max-width: 960px;
@@ -120,4 +132,30 @@ img.icon {
   > div {
     margin: 15px 0;
   }
+}
+
+
+.nav-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: solid 3px #D1B745;
+}
+
+
+nav {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+
+.menu {
+  @extend .flex-column;
+  @extend .nav-icon;
+  margin-bottom: 20px;
+}
+
+.blog {
+  @extend .flex-column;
+  @extend .nav-icon;
 }
