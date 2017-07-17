@@ -136,7 +136,9 @@ nav {
 .project {
   background: linear-gradient(to top right, #353535, #302F2E);
   border: solid 3px darkgrey;
-  margin: 15px; }
+  margin: 15px;
+  height: 200px;
+  width: 300px; }
 
 .thumbnail {
   height: 200px;
@@ -148,6 +150,9 @@ figcaption {
   font-size: .85em;
   position: absolute;
   transform: translateY(-150px); }
+
+a.project:hover {
+  border-color: #767676; }
 
 .filter {
   display: none; }

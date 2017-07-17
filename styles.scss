@@ -207,6 +207,8 @@ nav {
   border: solid 3px darkgrey;
   // border-radius: 20px;
   margin: 15px;
+  height: 200px;
+  width: 300px;
 }
 .thumbnail {
   height: 200px;
@@ -219,6 +221,10 @@ figcaption {
   font-size: .85em;
   position: absolute;
   transform: translateY(-150px);
+}
+
+a.project:hover {
+  border-color: darken(darkgrey, 20%);
 }
 
 .filter {
