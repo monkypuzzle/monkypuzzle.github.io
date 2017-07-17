@@ -15,9 +15,9 @@ $(document).ready(function(){
   $(".link").mouseenter(function(){
     showFilter();
   });
+  
   $(".link").mouseleave(function(){
     hideFilter();
-    hideNav();
   });
 
 });
@@ -34,6 +34,7 @@ var hideNav = function(){
 
 var showNav = function(){
   $(".section-link").slideDown(200).css("display","flex");
+  $(".nav-text").show();
 }
 
 var showFilter = function(){

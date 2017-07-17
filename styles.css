@@ -125,6 +125,7 @@ nav {
     margin-bottom: 20px; }
 
 .link {
+  background-color: #212121;
   margin-bottom: 10px; }
   .link span {
     left: 65px;
@@ -157,7 +158,7 @@ figcaption {
   position: fixed;
   bottom: 30px; }
 
-.section-link {
+.section-link, .nav-text {
   display: none; }
 
 /*# sourceMappingURL=styles.css.map */

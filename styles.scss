@@ -186,6 +186,7 @@ nav {
 .link {
   @extend .flex-column;
   @extend .nav-icon;
+  background-color: $raisin-black;
   margin-bottom: 10px;
   span {
     // display: none;
@@ -231,6 +232,6 @@ figcaption {
   bottom: 30px;
 }
 
-.section-link {
+.section-link, .nav-text {
   display: none;
 }
