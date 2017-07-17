@@ -4,26 +4,156 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Cormorant:300i,400,400i,700|Playfair+Display:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant:300i,400,400i,700|Open+Sans:300|Playfair+Display:400,700" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Paul Newsam | Web Developer</title>
 </head>
 <body>
   
-  <div class="page-wrapper flex-column">
-    <div class="content-wrapper flex-column">
-      <p><em>My name is</em></p>
+  <main class="container">
+    <div class="filter"></div>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down"><line x1="12" y1="4" x2="12" y2="20"></line><polyline points="18 14 12 20 6 14"></polyline></svg> -->
+    <nav>
+      <a class="link expand" href="#">
+        <span class="more nav-text">navigation</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical more"><circle cx="12" cy="12" r="2"></circle><circle cx="12" cy="4" r="2"></circle><circle cx="12" cy="20" r="2"></circle>
+        </svg>
+      </a>
+      <a class="link section-link" href="#about-me">
+        <span class="nav-text">about</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
+      <a class="link section-link" href="#projects">
+        <span class="nav-text">projects</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+          <path d="M12.89 1.45l8 4A2 2 0 0 1 22 7.24v9.53a2 2 0 0 1-1.11 1.79l-8 4a2 2 0 0 1-1.79 0l-8-4a2 2 0 0 1-1.1-1.8V7.24a2 2 0 0 1 1.11-1.79l8-4a2 2 0 0 1 1.78 0z"></path>
+          <polyline points="2.32 6.16 12 11 21.68 6.16"></polyline>
+          <line x1="12" y1="22.76" x2="12" y2="11"></line>
+        </svg>
+      </a>
+      <a class="link section-link" href="#contact">
+        <span class="nav-text">contact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+      <!-- <a class="link blog" href="">
+        <span class="nav-text">blog</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather">
+          <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17" y1="15" x2="9" y2="15"></line>
+        </svg>
+      </a> -->
+    </nav>
+
+    <section class="section intro">
+      <p>My name is...</p>
       <h1>Paul.</h1>
 
-      <p class="margin-top">My webpage is under construction.</p>
-      <p class="margin-bottom">In the meantime, <em>let's connect</em>!</p>
+      <p class="mt30 mb15">I'm a <strong>Web Developer</strong> and I'm... </p>
 
-      <h3>Send me an <a href="mailto:paul.newsam@gmail.com">email</a>.</h3>
-      <h3>Find me on <a href="https://github.com/pnewsam">Github</a>.</h3>
-      <h3>Connect with me on <a href="https://www.linkedin.com/in/paul-newsam/">LinkedIn</a>.</h3>
-      <h3>Download my <a href="resume.pdf">resume</a>.</h3>
-    </div>
-  </div>
+      <h2>Looking for opportunities.</h2>
+    </section>
+    
+    <section class="section about-me" id="about-me">
+      <p>You may want to know a little bit...</p>
+      <h1>About me.</h1>
+      <div>
+        <p>I grew up in sunny <strong>San Diego.</strong></p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+          <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </div>
+      <div>
+        <p>I went to school at <strong>UC Berkeley.</strong></p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award">
+          <circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+        </svg>
+      </div>
+      <div>
+        <p>I used to  <strong>count birds for a living.</strong></p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+        </svg>
+      </div>
 
+      <div>
+        <p>And in my spare time, I like to <strong>read and write</strong>.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <p>If I'm lucky, you're here to check out some of my...</p>
+      <h1>Projects.</h1>
+      <div>
+        <div class="row">
+              <a class="project" href="#">
+                <img src="assets/windhover-ventures.png" alt="Windhover Ventures" class="thumbnail">
+              </a>
+          <div class="project">
+            <figure>
+                <div class="thumbnail"></div>
+                <figcaption>
+                  <h3>Coming<br>Soon</h3>
+                </figcaption>
+            </figure>
+          </div>
+          <div class="project">
+            <figure>
+                <div class="thumbnail"></div>
+                <figcaption>
+                  <h3>Coming<br>Soon</h3>
+                </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <div class="project">
+            <figure>
+                <div class="thumbnail"></div>
+                <figcaption>
+                  <h3>Coming<br>Soon</h3>
+                </figcaption>
+            </figure>
+          </div>
+          <div class="project">
+            <figure>
+                <div class="thumbnail"></div>
+                <figcaption>
+                  <h3>Coming<br>Soon</h3>
+                </figcaption>
+            </figure>
+          </div>
+          <div class="project">
+            <figure>
+                <div class="thumbnail"></div>
+                <figcaption>
+                  <h3>Coming<br>Soon</h3>
+                </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p>Without further ado...</p>
+      <h1>Let's Connect!</h1>
+
+      <div>
+        <h3>Send me an <a href="mailto:paul.newsam@gmail.com">email</a>.</h3>
+        <h3>Find me on <a href="https://github.com/pnewsam">Github</a>.</h3>
+        <h3>Connect with me on <a href="https://www.linkedin.com/in/paul-newsam/">LinkedIn</a>.</h3>
+        <h3>Download my <a href="resume.pdf">resume</a>.</h3>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,243 @@
+// I. Resets
+// ========================================
+body, h1, h2, h3, p, br, figure {
+  margin: 0;
+  padding: 0;
+}
+a { text-decoration: none; }
+mark { background-color: transparent; }
+figure { box-sizing: border-box; }
+
+// II. Variables & Extensions
+// ========================================
+$mercury: #E4E4E4;
+$raisin-black: #212121;
+$black-olive: #3C3D3B;
+$old-gold: #D1B745;
+$jet-gradient: linear-gradient(to top right, #353535, #302F2E);
+
+$playfair-display: 'Playfair Display', "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+$cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+$open-sans: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+
+.flex-row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.flex-column {
+  @extend .flex-row;
+  flex-direction: column;
+}
+.fit-to-parent {
+  height: 100%;
+  width: 100%;
+}
+.full-window {
+  height: 100vh;
+  width: 100vw;
+}
+.icon-size {
+  height: 50px;
+  width: 50px;
+}
+.stick-to-top {
+  position: fixed;
+  top: 30px;
+}
+
+.mt30 { margin-top: 30px; }
+.mb15 { margin-bottom: 15px; }
+
+// Structural Classes
+// ========================================
+
+.section {
+  @extend .full-window;
+}
+.filter {
+  @extend .full-window;
+  position: fixed;
+  background-color: hsla(0, 0%, 13%, .9);
+  z-index: 2;
+}
+
+// III. Typography
+// ========================================
+
+body {
+  background-color: $raisin-black;
+  color: darkgrey;
+  text-align: center;
+  font-size: 18px;
+  font-family: $cormorant;
+}
+p {
+  font-size: 1.1em;
+}
+h1, h2, h4 {
+  color: $old-gold;
+  font-family: $playfair-display;
+}
+h1 {
+  font-size: 4em;
+  line-height: .8em;
+  margin-bottom: .2em;
+}
+h2 {
+  font-size: 3em;
+  line-height: .8em;
+}
+h3 {
+  color: $mercury;
+}
+// h4 {
+//   font-size: 2em;
+// }
+strong {
+  color: $mercury;
+  font-weight: bold;
+  font-style: normal;
+}
+a, mark {
+  color: $old-gold;
+}
+a:hover {
+  border-color: lighten($old-gold, 20%);
+  color: lighten($old-gold, 20%);
+  text-decoration: underline;
+}
+
+
+// Media Queries
+@media only screen and (min-width: 600px) {
+  body { font-size: 24px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  body { font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body { font-size: 36px;
+  }
+}
+
+img.icon {
+  height: 100px;
+  width: 100px;
+}
+.about-me {
+  > div:first-of-type {
+    margin-top: 30px;
+  }
+  > div {
+    @extend .flex-row;
+    width: 75%;
+    margin-top: 15px;
+  }
+  .feather {
+    @extend .icon-size;
+    margin: 0 25px;
+  }
+}
+.section > * {
+  max-width: 960px;
+}
+.section {
+  @extend .flex-column;
+}
+
+.projects {
+  > div > div {
+    @extend .flex-row;
+  }
+}
+
+.contact {
+  > div {
+    margin: 15px 0;
+  }
+}
+
+
+.nav-icon {
+  @extend .icon-size;
+  border-radius: 50px;
+  border: solid 3px $old-gold;
+}
+
+
+nav {
+  @extend .flex-column;
+  @extend .stick-to-top;
+  align-items: flex-start;
+  left: 30px;
+  font-size: .8em;
+  z-index: 3;
+  > div:first-of-type {
+    margin-bottom: 20px;
+  }
+  > div {
+    @extend .flex-row;
+  }
+}
+
+.link {
+  @extend .flex-column;
+  @extend .nav-icon;
+  background-color: $raisin-black;
+  margin-bottom: 10px;
+  span {
+    // display: none;
+    left: 65px;
+    position: absolute;
+    font-size: .7em;
+    font-family: $open-sans;
+  }
+}
+
+.blog {
+  @extend .flex-column;
+  @extend .nav-icon;
+}
+
+.project {
+  background: $jet-gradient;
+  border: solid 3px darkgrey;
+  // border-radius: 20px;
+  margin: 15px;
+  height: 200px;
+  width: 300px;
+}
+.thumbnail {
+  height: 200px;
+  width: 300px;
+}
+
+figcaption {
+  height: 0px;
+  width: 300px;
+  font-size: .85em;
+  position: absolute;
+  transform: translateY(-150px);
+}
+
+a.project:hover {
+  border-color: darken(darkgrey, 20%);
+}
+
+.filter {
+  display: none;
+}
+.feather-arrow-down {
+  @extend .icon-size;
+  color: $mercury;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+}
+
+.section-link, .nav-text {
+  display: none;
+}
