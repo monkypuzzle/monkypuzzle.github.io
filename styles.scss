@@ -1,3 +1,21 @@
+@import "node_modules/bulma/sass/utilities/initial-variables";
+
+
+$mercury: #E4E4E4;
+$raisin-black: #212121;
+$black-olive: #3C3D3B;
+$old-gold: #D1B745;
+$jet-gradient: linear-gradient(to top right, #353535, #302F2E);
+
+$playfair-display: 'Playfair Display', "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+$cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+$open-sans: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+
+$primary: $raisin-black;
+
+
+@import "node_modules/bulma/bulma";
+
 // I. Resets
 // ========================================
 body, h1, h2, h3, p, br, figure {
@@ -10,15 +28,7 @@ figure { box-sizing: border-box; }
 
 // II. Variables & Extensions
 // ========================================
-$mercury: #E4E4E4;
-$raisin-black: #212121;
-$black-olive: #3C3D3B;
-$old-gold: #D1B745;
-$jet-gradient: linear-gradient(to top right, #353535, #302F2E);
 
-$playfair-display: 'Playfair Display', "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
-$cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
-$open-sans: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 
 .flex-row {
   align-items: center;
