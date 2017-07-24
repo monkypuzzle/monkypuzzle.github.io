@@ -12,6 +12,7 @@ $cormorant: 'Cormorant', "Hoefler Text", "Baskerville old face", Garamond, "Time
 $open-sans: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 
 $primary: $raisin-black;
+$body-size: 28px;
 
 
 @import "node_modules/bulma/bulma";
@@ -56,15 +57,15 @@ figure { box-sizing: border-box; }
   top: 30px;
 }
 
-.mt30 { margin-top: 30px; }
-.mb15 { margin-bottom: 15px; }
+// .mt30 { margin-top: 30px; }
+// .mb15 { margin-bottom: 15px; }
 
 // Structural Classes
 // ========================================
 
-.section {
-  @extend .full-window;
-}
+// .section {
+//   @extend .full-window;
+// }
 .filter {
   @extend .full-window;
   position: fixed;
@@ -79,25 +80,25 @@ body {
   background-color: $raisin-black;
   color: darkgrey;
   text-align: center;
-  font-size: 18px;
+  // font-size: 18px;
   font-family: $cormorant;
 }
-p {
-  font-size: 1.1em;
-}
+// p {
+//   font-size: 1.1em;
+// }
 h1, h2, h4 {
   color: $old-gold;
   font-family: $playfair-display;
 }
-h1 {
-  font-size: 4em;
-  line-height: .8em;
-  margin-bottom: .2em;
-}
-h2 {
-  font-size: 3em;
-  line-height: .8em;
-}
+// h1 {
+//   font-size: 4em;
+//   line-height: .8em;
+//   margin-bottom: .2em;
+// }
+// h2 {
+//   font-size: 3em;
+//   line-height: .8em;
+// }
 h3 {
   color: $mercury;
 }
@@ -120,18 +121,18 @@ a:hover {
 
 
 // Media Queries
-@media only screen and (min-width: 600px) {
-  body { font-size: 24px;
-  }
-}
-@media only screen and (min-width: 750px) {
-  body { font-size: 32px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  body { font-size: 36px;
-  }
-}
+// @media only screen and (min-width: 600px) {
+//   body { font-size: 24px;
+//   }
+// }
+// @media only screen and (min-width: 750px) {
+//   body { font-size: 32px;
+//   }
+// }
+// @media only screen and (min-width: 1000px) {
+//   body { font-size: 36px;
+//   }
+// }
 
 img.icon {
   height: 100px;
@@ -207,31 +208,31 @@ nav {
   }
 }
 
-.blog {
-  @extend .flex-column;
-  @extend .nav-icon;
-}
+// .blog {
+//   @extend .flex-column;
+//   @extend .nav-icon;
+// }
 
-.project {
-  background: $jet-gradient;
-  border: solid 3px darkgrey;
-  // border-radius: 20px;
-  margin: 15px;
-  height: 200px;
-  width: 300px;
-}
-.thumbnail {
-  height: 200px;
-  width: 300px;
-}
+// .project {
+//   background: $jet-gradient;
+//   border: solid 3px darkgrey;
+//   // border-radius: 20px;
+//   margin: 15px;
+//   height: 200px;
+//   width: 300px;
+// }
+// .thumbnail {
+//   height: 200px;
+//   width: 300px;
+// }
 
-figcaption {
-  height: 0px;
-  width: 300px;
-  font-size: .85em;
-  position: absolute;
-  transform: translateY(-150px);
-}
+// figcaption {
+//   height: 0px;
+//   width: 300px;
+//   font-size: .85em;
+//   position: absolute;
+//   transform: translateY(-150px);
+// }
 
 a.project:hover {
   border-color: darken(darkgrey, 20%);

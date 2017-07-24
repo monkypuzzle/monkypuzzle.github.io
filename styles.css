@@ -79,7 +79,7 @@ th {
 
 html {
   background-color: #fff;
-  font-size: 16px;
+  font-size: 28px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -4821,35 +4821,29 @@ mark {
 figure {
   box-sizing: border-box; }
 
-.flex-row, .flex-column, .section, nav, .link, .blog, .about-me > div, .projects > div > div, nav > div {
+.flex-row, .flex-column, .section, nav, .link, .about-me > div, .projects > div > div, nav > div {
   align-items: center;
   display: flex;
   justify-content: center; }
 
-.flex-column, .section, nav, .link, .blog {
+.flex-column, .section, nav, .link {
   flex-direction: column; }
 
 .fit-to-parent {
   height: 100%;
   width: 100%; }
 
-.full-window, .section, .filter {
+.full-window, .filter {
   height: 100vh;
   width: 100vw; }
 
-.icon-size, .about-me .feather, .nav-icon, .link, .blog, .feather-arrow-down {
+.icon-size, .about-me .feather, .nav-icon, .link, .feather-arrow-down {
   height: 50px;
   width: 50px; }
 
 .stick-to-top, nav {
   position: fixed;
   top: 30px; }
-
-.mt30 {
-  margin-top: 30px; }
-
-.mb15 {
-  margin-bottom: 15px; }
 
 .filter {
   position: fixed;
@@ -4860,24 +4854,11 @@ body {
   background-color: #212121;
   color: darkgrey;
   text-align: center;
-  font-size: 18px;
   font-family: "Cormorant", "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif; }
-
-p {
-  font-size: 1.1em; }
 
 h1, h2, h4 {
   color: #D1B745;
   font-family: "Playfair Display", "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
-
-h1 {
-  font-size: 4em;
-  line-height: .8em;
-  margin-bottom: .2em; }
-
-h2 {
-  font-size: 3em;
-  line-height: .8em; }
 
 h3 {
   color: #E4E4E4; }
@@ -4895,15 +4876,6 @@ a:hover {
   color: #e5d797;
   text-decoration: underline; }
 
-@media only screen and (min-width: 600px) {
-  body {
-    font-size: 24px; } }
-@media only screen and (min-width: 750px) {
-  body {
-    font-size: 32px; } }
-@media only screen and (min-width: 1000px) {
-  body {
-    font-size: 36px; } }
 img.icon {
   height: 100px;
   width: 100px; }
@@ -4922,7 +4894,7 @@ img.icon {
 .contact > div {
   margin: 15px 0; }
 
-.nav-icon, .link, .blog {
+.nav-icon, .link {
   border-radius: 50px;
   border: solid 3px #D1B745; }
 
@@ -4942,24 +4914,6 @@ nav {
     position: absolute;
     font-size: .7em;
     font-family: "Open Sans", Tahoma, Geneva, Verdana, sans-serif; }
-
-.project {
-  background: linear-gradient(to top right, #353535, #302F2E);
-  border: solid 3px darkgrey;
-  margin: 15px;
-  height: 200px;
-  width: 300px; }
-
-.thumbnail {
-  height: 200px;
-  width: 300px; }
-
-figcaption {
-  height: 0px;
-  width: 300px;
-  font-size: .85em;
-  position: absolute;
-  transform: translateY(-150px); }
 
 a.project:hover {
   border-color: #767676; }
